@@ -31,10 +31,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-1 left-2 right-2 z-50 transition-all duration-300 rounded-full ${
         isScrolled 
           ? 'glass py-3 shadow-sm' 
-          : 'bg-transparent py-5'
+          : 'bg-transparent py-3'
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -59,7 +59,7 @@ const Header = () => {
         <div className="hidden md:block">
           <a
             href="#contact"
-            className="bg-primary text-primary-foreground px-6 py-3 rounded-md text-sm font-medium tracking-wide transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]"
+            className="bg-barber-900 text-white px-6 py-3 rounded-md text-sm font-medium tracking-wide transition-all duration-300 hover:shadow-md hover:translate-y-[-2px]"
           >
             Book Now
           </a>
@@ -76,7 +76,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 glass py-5 space-y-3 ${
+        className={`md:hidden absolute top-full mt-2 left-0 right-0 glass py-5 space-y-3 rounded-xl ${
           isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 pointer-events-none'
         } transition-all duration-300 ease-in-out`}
       >
@@ -93,7 +93,7 @@ const Header = () => {
         <div className="pt-2 pb-3 px-6">
           <a
             href="#contact"
-            className="block w-full bg-primary text-primary-foreground text-center py-3 rounded-md font-medium"
+            className="block w-full bg-barber-900 text-white text-center py-3 rounded-md font-medium"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Book Now
